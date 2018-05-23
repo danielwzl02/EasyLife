@@ -5,13 +5,15 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js --exec \"npm run lint && node\"",
+    "lint": "./node_modules/.bin/eslint **/*/js"
   },
   "author": "Zilong Wang",
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "dotenv": "^5.0.1",
+    "eslint": "^4.19.1",
     "express": "^4.16.3",
     "express-promise-router": "^3.0.2",
     "mongoose": "^5.1.2",
